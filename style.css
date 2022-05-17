@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: rgb(231, 231, 231);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubox {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.menubox .plusbtn {
+    position: absolute;
+    z-index: 0;
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menubox .plusbtn ion-icon {
+    transition: 1s;
+    background: rgb(240, 240, 240);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(60, 60, 60);
+  
+}
+
+.menubox .plusbtn ion-icon:hover {
+    transform: rotateZ(-360deg);
+}
+
+.menubox .linkbox {
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    transform: rotateZ(360deg);
+    transition: 1s;
+}
+
+.menubox .linkbox .box {
+    position: absolute;
+    width: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    z-index: 0;
+}
+
+.menubox .linkbox .a {
+    transform: rotateZ(90deg);
+}
+
+.menubox .linkbox .a ion-icon {
+    transform: rotateZ(-90deg);
+
+}
+
+.menubox .linkbox .b {
+    transform: rotateZ(360deg);
+
+}
+
+.menubox .linkbox .c {
+    transform: rotateZ(-45deg);
+}
+
+.menubox .linkbox .c ion-icon {
+    transform: rotateZ(45deg);
+}
+
+.menubox .linkbox .d {
+    transform: rotateZ(45deg);
+
+}
+
+.menubox .linkbox .d ion-icon {
+    transform: rotateZ(-45deg);
+}
+
+.menubox .linkbox .box ion-icon {
+    padding: 2px;
+    border-radius: 50%;
+    color: rgb(62, 62, 62);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menubox .linkbox .box ion-icon:hover {
+    color: rgb(231, 212, 101);
+    background: rgb(68, 68, 68);
+}

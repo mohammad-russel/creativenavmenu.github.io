@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle menu</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+      <div class="menubox">
+          <div class="plusbtn">
+            <ion-icon class="mbtn" name="add-outline"></ion-icon>
+          </div>
+          <div class="linkbox">
+              <div class="box a">
+                <ion-icon name="home-outline"></ion-icon>
+                <ion-icon name="settings-outline"></ion-icon>
+              </div>
+              <div class="box b">
+                <ion-icon name="cart-outline"></ion-icon>
+                <ion-icon name="construct-outline"></ion-icon>
+              </div>
+              <div class="box c">
+                <ion-icon name="home-outline"></ion-icon>
+                <ion-icon name="settings-outline"></ion-icon>
+              </div>
+              <div class="box d">
+                <ion-icon name="cart-outline"></ion-icon>
+                <ion-icon name="construct-outline"></ion-icon>
+              </div>
+          </div>
+      </div>
+    </div>
+</body>
+<script>
+$(document).ready(function(){
+
+    $(".mbtn").hover(function(){
+$(".box ion-icon").css("box-shadow","rgb(86, 86, 86) 1px 1px 1px 0px , rgb(255, 255, 255) -1px -1px 1px 0px")
+$(".box").css("width","100%")
+$(".linkbox").css("transform","rotateZ(0deg)")
+});
+
+$(".menubox").mouseleave(function(){
+$(".plusbtn ion-icon").css("box-shadow","none")
+$(".box ion-icon").css("box-shadow","none")
+$(".box").css("width","0%" )
+$(".linkbox").css("transform","rotateZ(360deg)")
+});
+
+});
+</script>
+</html>
